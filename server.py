@@ -50,5 +50,9 @@ def result():
 
 	return render_template('result.html',youtube_list=youtube_list,article=article,image=img)
 
+@app.route('/')
+def test():
+	return "test"
+	
 if __name__ == "__main__":
     app.run()
