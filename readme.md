@@ -11,6 +11,5 @@ pip install Flask
 
 # Running on dev environment
 ```
-export FLASK_APP=server.py
-flask run
+python server.py
 ```
