@@ -31,7 +31,7 @@ def wiki_search(term):
 	result = wikipedia.page(term)
 	return result
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
 	return render_template('index.html')
     
