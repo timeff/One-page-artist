@@ -51,5 +51,4 @@ def result():
 	return render_template('result.html',youtube_list=youtube_list,article=article,image=img)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run()

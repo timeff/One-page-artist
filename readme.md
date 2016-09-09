@@ -6,7 +6,7 @@ Try exploring python Flask framework and youtube / wikipedia API
 
 #Installation
 ```
-pip install Flask
+pip install Flask gunicorn
 ```
 
 # Running on dev environment
