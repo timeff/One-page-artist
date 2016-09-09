@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<title>--Artist Name---</title>
+</head>
+<body>
+	<div class="container" style="margin-top:20px;">
+		<div class='row'>
+			<div class='col-md-8'>
+			<div class='embed-responsive embed-responsive-16by9'>
+                    <iframe class='embed-responsive-item' src={{youtube_list[0][0]}}></iframe>
+            </div>
+				<ul class="list-group">
+				{% for x in youtube_list %}
+					<a href='{{x[0]}}'>
+						<li class="list-group-item">
+					        <div class="video-list-media">
+					            <div class='media-left'>
+					                <img class='media-object' src='{{x[3]}}'>
+					            </div>
+					            <div class='media-body'>
+					                <div class='media-heading'><h4>{{x[1]}}</h4>{{x[2]}}</div>
+					            </div>
+					        </div>
+				       </li> 
+			       </a>
+					{%endfor%}
+				</ul>
+			</div>
+			<div class='col-md-4'>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>{{article.title}}</h2>
+					</div>
+					<div class="panel-body">
+					<img src='{{image}}' class='thumbnail img-responsive'>
+					URL: <a href='{{article.url}}'>{{article.url}}</a>
+					<hr>
+					{{article.summary[0:600]+"..."}}
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="col-md-12 text-center">
+			<a href="/" class='btn btn-default'>Back</a>
+			</div>
+	</div>
+</body>
+</html>
